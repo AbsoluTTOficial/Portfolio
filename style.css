@@ -1,0 +1,196 @@
+@import "https://fonts.googleapis.com/css?family=Josefin+Sans:400,700";
+
+/* Tudo */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#separated {
+    margin-top: 700px;
+}
+
+/* Fundo */
+body{
+    background: linear-gradient(-45deg, #d504ff80, #1900ff80, #00aeff80, #15ff0080, #fffb0080, #ff9a0180, #ff000080);
+    background-size: 400% 400%;
+    animation: change 10s ease-in-out infinite;
+    background-color: #101010;
+}
+@keyframes change {
+    0%{
+        background-position: 0 10%;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    100%{
+        background-position: 0 10%;
+    }
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #101010;
+    color: #fff;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+header a {
+    color: #fff;
+}
+
+#navigation {
+    display: flex;
+}
+#navigation li {
+    margin-left: 10px;
+}
+#navigation li a {
+    display: block;
+    padding: 10px;
+}
+#navigation a:hover{
+    color: #D6A4A4;
+}
+
+/* Conteudo 1 - Sobre */
+.middle {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card{
+    cursor: pointer;
+    width: 340px;
+    height: 480px;
+}
+.front, .back{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+}
+.front img{
+    height: 100%;
+}
+.front{
+    transform: perspective(600px) rotateY(0deg);
+}
+.back {
+    background: #101010ad;
+    transform: perspective(600px) rotateY(180deg);
+}
+.back-content{
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+.sm{
+    margin: 20px 0;
+}
+.sm a{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+.sm a:hover{
+    background: #D6A4A4;
+    color: white;
+}
+.card:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+    transform: perspective(600px) rotateY(-0deg);
+}
+
+/* Conteudo 2 - Formação */
+#form{
+    background: #101010ad;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    letter-spacing: 2px;
+}
+#form h2{
+    margin-bottom: 15px;
+}
+#form p{
+    margin-top: 5px;
+}
+
+/* Conteudo 3 - Projetos */
+#proj {
+    background-color: #101010;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding: 50px;
+}
+#proj h2 {
+    font-size: 30px;
+}
+#position {
+    font-size: 30px;
+}
+#proj p {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#video {
+    margin-top: 4%;
+}
+#proj a {
+    color: #fff;
+    font-size: 4vh;
+    letter-spacing: 25px;
+}
+#proj a:hover{
+    color: #D6A4A4;
+}
+#proj i{
+    margin-top: 20px;
+}
+
+/* Conteudo 4 - Experiência */
+#exp {
+    background-color: #101010ad;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+#exp h2{
+    margin-bottom: 15px;
+}
+#exp h3{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#exp p{
+    margin-top: 5px;
+}
+
+/* Footer */
+footer{
+    background-color: #101010;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    font-size: 18px;
+}
